@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set +e
 
-MINICONDA_VERSION=$(cat environment.yml | grep 'runtime:'| tr -d "\n")
+MINICONDA_VERSION=$(cat environment.yml | grep 'runtime:' | cut -c 9- | tr -d "\n")
 IFS='-' read -r -a VERSION_ARRAY <<< ${MINICONDA_VERSION}
 VERSION=${VERSION_ARRAY[1]}
 
