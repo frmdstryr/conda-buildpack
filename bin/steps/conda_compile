@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set +e
+set -e
 
 MINICONDA_VERSION=$(cat environment.yml | grep 'runtime:' | cut -c 9- | tr -d " \n")
 IFS='-' read -r -a VERSION_ARRAY <<< ${MINICONDA_VERSION}
