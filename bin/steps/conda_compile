@@ -36,7 +36,7 @@ if [[ $VERSION =~ ^[0-9]+(\.[0-9]+)*$ ]]; then
 	echo "conda ==${VERSION}" >> $HOME/.heroku/miniconda/conda-meta/pinned
 fi
 echo "added pinned file in $HOME/.heroku/miniconda/conda-meta/pinned"
-conda install $MINICONDA_VERBOSITY nomkl --yes | indent
+#conda install $MINICONDA_VERBOSITY nomkl --yes | indent
 
 # Update the root conda env with the environment.yml instead of creating
 # a new env
